@@ -32,17 +32,10 @@ public class DepartamentosServiceImpl implements IDepartamentosService {
 
 	}
 
-	
-
 	@Override
 	public Departamentos guardarDepartamentos(Departamentos departamento) {
 		// TODO Auto-generated method stub
 		return iDepartamentosDAO.save(departamento);
 	}
-
-	
-	
-
-
 
 }

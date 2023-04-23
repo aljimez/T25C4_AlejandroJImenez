@@ -44,6 +44,7 @@ public class DepartamentosController {
 		return departamentoxID;
 	}
 	
+	
 	@PostMapping("/departamentos")
 	public Departamentos saveDepartamento(@RequestBody Departamentos departamento) {
 		return iDepartamentosService.guardarDepartamentos(departamento);

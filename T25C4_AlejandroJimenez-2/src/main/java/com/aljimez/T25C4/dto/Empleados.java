@@ -22,17 +22,16 @@ public class Empleados {
 
 	@ManyToOne
 	@JoinColumn(name = "departamento")
-	private Departamentos departamento;
+	private Departamentos departamentos;
 
-	public Empleados() {
-	}
+	public Empleados() {}
 
 	public Empleados(String dni, String nombre, String apellidos, Departamentos departamento) {
 
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
-		this.departamento = departamento;
+		this.departamentos = departamento;
 
 	}
 
@@ -61,17 +60,17 @@ public class Empleados {
 	}
 
 	public Departamentos getDepartamento() {
-		return departamento;
+		return departamentos;
 	}
 
 	public void setDepartamento(Departamentos departamento) {
-		this.departamento = departamento;
+		this.departamentos = departamento;
 	}
 
 	@Override
 	public String toString() {
 		return "Empleados [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", departamento="
-				+ departamento + "]";
+				+ departamentos + "]";
 	}
 
 }

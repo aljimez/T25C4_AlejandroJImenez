@@ -26,7 +26,7 @@ public class Departamentos {
 	private String nombre;
 	
 	@Column(name = "presupuesto")
-	private Long presupuesto;
+	private int presupuesto;
 	
 	
 	@OneToMany
@@ -35,7 +35,7 @@ public class Departamentos {
 	
 	public Departamentos() {}
 	
-	public Departamentos(Long id, String nombre,Long presupuesto) {
+	public Departamentos(Long id, String nombre,int presupuesto) {
 		this.id = id;
 		this.nombre=nombre;
 		this.presupuesto = presupuesto;
@@ -58,11 +58,11 @@ public class Departamentos {
 		this.nombre = nombre;
 	}
 
-	public Long getPresupuesto() {
+	public int getPresupuesto() {
 		return presupuesto;
 	}
 
-	public void setPresupuesto(Long presupuesto) {
+	public void setPresupuesto(int presupuesto) {
 		this.presupuesto = presupuesto;
 	}
 

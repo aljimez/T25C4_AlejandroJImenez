@@ -26,7 +26,7 @@ public class Fabricantes {
 	private String nombre;
 
 	@OneToMany
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "FKFabricante")
 	private List<Articulos> articulos;
 
 		public Fabricantes() {
@@ -37,6 +37,7 @@ public class Fabricantes {
 		this.id = id;
 		this.nombre = nombre;
 	}
+	
 
 	public Long getId() {
 		return id;
@@ -54,6 +55,8 @@ public class Fabricantes {
 		this.nombre = nombre;
 	}
 
+	@JsonIgnore
+	@OneToMany (fetch = FetchType.LAZY,mappedBy = "Articulo")
 	public List<Articulos> getArticulos() {
 		return articulos;
 	}
@@ -67,10 +70,6 @@ public class Fabricantes {
 		return "Fabricantes [id=" + id + ", nombre=" + nombre + ", articulos=" + articulos + "]";
 	}
 
-	public void setId() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	
 }

@@ -14,38 +14,31 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="articulos")
+@Table(name = "articulos")
 public class Articulos {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column
 	private String nombre;
-	
+
 	@Column
 	private int precio;
-	
-	@ManyToOne
-    @JoinColumn(name="Fabricantes")
-    private Fabricantes fabricante;
 
-	
-	public Articulos() {}
-	
-	public Articulos (Long id,String nombre, int precio,Fabricantes fabricante) {
-		
+	@ManyToOne
+	@JoinColumn(name = "codigo_fabricantes")
+	private Fabricantes fabricante;
+
+	public Articulos() {
+	}
+
+	public Articulos(Long id, String nombre, int precio, Fabricantes fabricante) {
 		this.id = id;
 		this.nombre = nombre;
 		this.precio = precio;
 		this.fabricante = fabricante;
-	}
-	
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Fabricantes")
-	public Fabricantes getFabricantes() {
-		return fabricante;
 	}
 
 	public Long getId() {
@@ -55,8 +48,6 @@ public class Articulos {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	
 
 	public int getPrecio() {
 		return precio;
@@ -87,8 +78,4 @@ public class Articulos {
 		return "Articulos [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", fabricante=" + fabricante + "]";
 	}
 
-	
-	
-	
-	
 }

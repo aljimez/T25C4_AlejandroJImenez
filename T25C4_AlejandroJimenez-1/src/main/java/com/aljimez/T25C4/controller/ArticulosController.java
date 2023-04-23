@@ -42,7 +42,7 @@ public class ArticulosController {
 
 		Fabricantes fabricante = new Fabricantes();
 
-		fabricante.setId();
+		fabricante.setId(id);
 
 		return articulosServiceImpl.listarArticulosFabricantes(fabricante);
 
@@ -62,7 +62,9 @@ public class ArticulosController {
 		Articulos Articulos_seleccionado = new Articulos();
 		
 		Articulos_seleccionado = articulosServiceImpl.articulosXID(id);
-		Articulos_seleccionado.setName(articulos.getName());
+		Articulos_seleccionado.setNombre(articulos.getNombre());
+		Articulos_seleccionado.setPrecio(articulos.getPrecio());
+		Articulos_seleccionado.setFabricante(articulos.getFabricante());
 
 		Articulos_seleccionado = articulosServiceImpl.actualizarArticulos(Articulos_seleccionado);
 		

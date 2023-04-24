@@ -34,22 +34,22 @@ public class CajaController {
 	}
 	
 	@GetMapping("/cajas/{box_id}")
-	public Cajas cajaXID(@PathVariable(name="box_id") String id) {
+	public Cajas cajaXID(@PathVariable(name="box_id") String box_id) {
 		
 		Cajas caja_xid= new Cajas();
 		
-		caja_xid=CajasServiceImpl.cajaXID(id);
+		caja_xid=CajasServiceImpl.cajaXID(box_id);
 		
 		return caja_xid;
 	}
 	
 	@PutMapping("/cajas/{box_id}")
-	public Cajas actualizarCaja(@PathVariable(name="box_id")String id,@RequestBody Cajas caja) {
+	public Cajas actualizarCaja(@PathVariable(name="box_id")String box_id,@RequestBody Cajas caja) {
 		
 		Cajas caja_seleccionada= new Cajas();
 		Cajas caja_actualizada= new Cajas();
 		
-		caja_seleccionada= CajasServiceImpl.cajaXID(id);
+		caja_seleccionada= CajasServiceImpl.cajaXID(box_id);
 		
 		caja_seleccionada.setContenido(caja.getContenido());
 		caja_seleccionada.setValor(caja.getValor());
@@ -61,7 +61,7 @@ public class CajaController {
 	}
 	
 	@DeleteMapping("/cajas/{box_id}")
-	public void eliminarCaja(@PathVariable(name="box_id")String id) {
-		CajasServiceImpl.eliminarCaja(id);
+	public void eliminarCaja(@PathVariable(name="box_id")String box_id) {
+		CajasServiceImpl.eliminarCaja(box_id);
 	}
 	}

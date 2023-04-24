@@ -61,8 +61,8 @@ public class AlmacenController {
 		return almacen_updated;
 	}
 	
-	@DeleteMapping("/almacenes/{box_id}")
-	public void eliminarAlmacen(@PathVariable(name="box_id")Long id) {
+	@DeleteMapping("/almacenes/{id}")
+	public void eliminarAlmacen(@PathVariable(name="id")Long id) {
 		almacenesServiceImpl.eliminarAlmacen(id);
 	}
 

@@ -45,11 +45,6 @@ public class EmpleadosServiceImpl implements IEmpleadosService{
 		
 	}
 
-	public List<Departamentos> listarEmpleadosDepartamento(Departamentos departamentos) {
-		// TODO Auto-generated method stub
-		return iEmpleadosDAO.findByFabricante(departamentos);
-	}
-
 	
 
 

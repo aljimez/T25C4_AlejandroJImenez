@@ -65,6 +65,7 @@ public class DepartamentosController {
 	public Departamentos saveDepartamento(@RequestBody Departamentos departamento) {
 		return iDepartamentosService.guardarDepartamentos(departamento);
 	}
+	
 	@DeleteMapping("/departamentos/{id}")
 	public void eleiminarDepartamento(@PathVariable(name="id")Long id) {
 		iDepartamentosService.eliminarDepartamento(id);

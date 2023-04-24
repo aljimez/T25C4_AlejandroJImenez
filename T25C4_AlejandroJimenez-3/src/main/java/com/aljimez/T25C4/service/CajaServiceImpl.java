@@ -42,7 +42,7 @@ public class CajaServiceImpl implements ICajaService{
 	@Override
 	public void eliminarCaja(String box_id) {
 		// TODO Auto-generated method stub
-		iCajasDAO.findById(box_id);
+		iCajasDAO.deleteById(box_id);
 
 	}
 

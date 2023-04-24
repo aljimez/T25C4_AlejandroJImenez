@@ -17,10 +17,7 @@ public interface IDepartamentosService {
 
 	public void eliminarDepartamento(Long id);
 	
-	public List<Departamentos> listarDepartamentosEmpleados(Empleados empleados);
-
-	public List<Departamentos> listarEmpleadosDepartamento(Departamentos departamentos);
-
+	
 
 
 }

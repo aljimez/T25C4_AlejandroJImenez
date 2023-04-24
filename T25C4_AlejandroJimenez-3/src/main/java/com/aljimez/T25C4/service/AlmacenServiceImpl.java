@@ -41,7 +41,7 @@ public class AlmacenServiceImpl  implements IAlmacenService{
 	@Override
 	public void eliminarAlmacen(Long id) {
 		// TODO Auto-generated method stub
-		iAlmacenesDAO.findById(id);
+		iAlmacenesDAO.deleteById(id);
 
 	}
 	

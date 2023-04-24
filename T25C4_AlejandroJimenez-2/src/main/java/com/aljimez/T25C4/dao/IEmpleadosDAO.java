@@ -9,6 +9,5 @@ import com.aljimez.T25C4.dto.Empleados;
 
 public interface IEmpleadosDAO  extends  JpaRepository<Empleados, String>{
 
-	List<Departamentos> findByFabricante(Departamentos departamentos);
 
 }

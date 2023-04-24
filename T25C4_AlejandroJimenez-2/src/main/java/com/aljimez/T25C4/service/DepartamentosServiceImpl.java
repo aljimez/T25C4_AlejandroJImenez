@@ -39,17 +39,8 @@ public class DepartamentosServiceImpl implements IDepartamentosService {
 		return iDepartamentosDAO.save(departamento);
 	}
 
-	@Override
-	public List<Departamentos> listarDepartamentosEmpleados(Empleados empleados) {
-		// TODO Auto-generated method stub
-		return iDepartamentosDAO.findByEmpleados(empleados);
-	}
 
-	@Override
-	public List<Departamentos> listarEmpleadosDepartamento(Departamentos departamentos) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 
 

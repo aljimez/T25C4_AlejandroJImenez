@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.aljimez.T25C4.dao.IDepartamentosDAO;
 import com.aljimez.T25C4.dto.Departamentos;
+import com.aljimez.T25C4.dto.Empleados;
 
 @Service
 public class DepartamentosServiceImpl implements IDepartamentosService {
@@ -37,5 +38,19 @@ public class DepartamentosServiceImpl implements IDepartamentosService {
 		// TODO Auto-generated method stub
 		return iDepartamentosDAO.save(departamento);
 	}
+
+	@Override
+	public List<Departamentos> listarDepartamentosEmpleados(Empleados empleados) {
+		// TODO Auto-generated method stub
+		return iDepartamentosDAO.findByEmpleados(empleados);
+	}
+
+	@Override
+	public List<Departamentos> listarEmpleadosDepartamento(Departamentos departamentos) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 
 }

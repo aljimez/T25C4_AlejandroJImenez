@@ -3,19 +3,24 @@ package com.aljimez.T25C4.service;
 import java.util.List;
 
 import com.aljimez.T25C4.dto.Departamentos;
+import com.aljimez.T25C4.dto.Empleados;
 
 public interface IDepartamentosService {
 
-	// Metodos del CRUD
-	public List<Departamentos> listarDepartamentos(); // Listar All
+	public List<Departamentos> listarDepartamentos(); 
 
-	public Departamentos guardarDepartamentos(Departamentos departamentos); // CREATE
+	public Departamentos guardarDepartamentos(Departamentos departamentos); 
 
-	public Departamentos departamentosXID(Long id); // READ
+	public Departamentos departamentosXID(Long id); 
 
-	public Departamentos actualizarDepartamentos(Departamentos departamentos); // UPDATE
+	public Departamentos actualizarDepartamentos(Departamentos departamentos); 
 
-	public void eliminarDepartamento(Long id);// DELETE
+	public void eliminarDepartamento(Long id);
+	
+	public List<Departamentos> listarDepartamentosEmpleados(Empleados empleados);
+
+	public List<Departamentos> listarEmpleadosDepartamento(Departamentos departamentos);
+
 
 
 }

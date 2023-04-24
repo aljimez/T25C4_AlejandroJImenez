@@ -15,7 +15,7 @@ CREATE TABLE empleados (
   apellidos nvarchar(255) DEFAULT NULL,
   departamento int DEFAULT NULL,
   PRIMARY KEY (dni),
-  CONSTRAINT empleados_fk FOREIGN KEY (departamento) REFERENCES departamentos (id)
+   FOREIGN KEY (departamento) REFERENCES departamentos (id)
 );
 
 

@@ -6,42 +6,48 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.aljimez.T25C4.dao.IEmpleadosDAO;
+import com.aljimez.T25C4.dto.Departamentos;
 import com.aljimez.T25C4.dto.Empleados;
 @Service
 public class EmpleadosServiceImpl implements IEmpleadosService{
 
 
 	@Autowired
-	IEmpleadosDAO iArticulosDAO;
+	IEmpleadosDAO iEmpleadosDAO;
 
 	@Override
 	public List<Empleados> listarEmpleados() {
 		// TODO Auto-generated method stub
-		return iArticulosDAO.findAll();
+		return iEmpleadosDAO.findAll();
 	}
 
 	@Override
 	public Empleados guardarEmpleados(Empleados empleado) {
 		// TODO Auto-generated method stub
-		return iArticulosDAO.save(empleado);
+		return iEmpleadosDAO.save(empleado);
 	}
 
 	@Override
 	public Empleados empleadoXID(String dni) {
 		// TODO Auto-generated method stub
-		return iArticulosDAO.findById(dni).get();
+		return iEmpleadosDAO.findById(dni).get();
 	}
 
 	@Override
 	public Empleados actualizarEmpleado(Empleados empleado) {
 		// TODO Auto-generated method stub
-		return iArticulosDAO.save(empleado);
+		return iEmpleadosDAO.save(empleado);
 	}
 
 	@Override
 	public void eliminarEmpleado(String dni) {
-		iArticulosDAO.deleteById(dni);
+		iEmpleadosDAO.deleteById(dni);
 		
+	}
+
+	public List<Departamentos> listarEmpleadosDepartamento(Departamentos departamentos) {
+		// TODO Auto-generated method stub
+		return iEmpleadosDAO.findByFabricante(departamentos);
 	}
 
 	

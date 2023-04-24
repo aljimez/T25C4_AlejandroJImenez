@@ -31,7 +31,7 @@ public class PeliculasController {
 	}
 	
 	@PostMapping ("/peliculas")
-	public Peliculas savePeliculas(@PathVariable Peliculas peliculas) {
+	public Peliculas savePeliculas(@RequestBody Peliculas peliculas) {
 		
 		return peliculasServiceImpl.guardarPelicula(peliculas);
 		
@@ -56,7 +56,7 @@ public class PeliculasController {
 	
 	pelicula_seleccionada= peliculasServiceImpl.peliculaXID(id);
 	
-	pelicula_seleccionada.setName(pelicula.getName());
+	pelicula_seleccionada.setNombre(pelicula.getNombre());
 	pelicula_seleccionada.setCalificacionedad(pelicula.getCalificacionedad());
 	
 	peliculas_updated = peliculasServiceImpl.actualizarPelicula(pelicula_seleccionada);
